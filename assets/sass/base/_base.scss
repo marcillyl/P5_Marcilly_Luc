@@ -7,14 +7,17 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: $black;
+    background: $darker;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 a {
     cursor: pointer;
     text-decoration: none;
-}
-h1, h2, h3, h4, h5, h6, p {
-    cursor: default;
+    color: $white;
 }
 @media screen and (max-width: 480px) {
     html, body {

@@ -1,0 +1,32 @@
+.productInfo {
+    margin-left: 70px;
+}
+.productBox {
+    @include flex-col;
+    width: 100%;
+        & img {
+            max-height: 400px;
+        }
+        &-data {
+            height: 100%;
+            padding: 40px 0;
+                & h3 {
+                    display: inline-block;
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 1.4em;
+                    font-weight: 700;
+                    padding: 0;
+                }
+                & p {
+                    max-width: 400px;
+                    margin-top: 10px;
+                    line-height: 1.4em;
+                }
+                & h4 {
+                    font-size: 1.3em;
+                    font-weight: 700;
+                    margin-top: 14pt;
+                }
+        }
+}
