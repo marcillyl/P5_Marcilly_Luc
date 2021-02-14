@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/css/all.min.css" />
         <link rel="stylesheet" href="assets/css/main.min.css" />
-        <title id="page">Product</title>
+        <title>Product</title>
     </head>
-
+    
     <body>
+
+        <div class="navPane"></div>
 
         <div class="container">
 
@@ -20,20 +22,27 @@
 
             <main>
                 <header class="header">
-                    <h1 class="header__brand">Orinoco</h1>
+                    <h1 class="header__brand">Orinoco_</h1>
                     <p class="header__text">Praecipitem exitium maioribus causam super exitium iam est exitium arbitror est nobilem.</p>
                 </header>
             </main>
 
             <section id="productInfo" class="productInfo">
                 <div id="productBox" class="productBox">
-                    
+                    <img src="" alt="" id="productImg" class="productBox__img">
+                    <div id="productData" class="productBox-data">
+                        <h3 id="productName" class="productBox-data__heading"></h3>
+                        <p id="productDescription" class="productBox-data__text"></p>
+                        <h4 id="productPrice" class="productBox-data__price"></h4>
+                        <select name="" id="selectOption" class="selectOption"></select>
+                        <button id="addToCartButton" class="addToCart" onclick="addToCart()">Add to cart</button>
+                    </div>
                 </div>
             </section>
 
         </div>
 
-        <script type="text/javascript" src="assets/js/script.js"></script>
-        
+        <script type="text/javascript" src="assets/js/product.js"></script>
+
     </body>
 </html>

@@ -1,25 +1,29 @@
 main {
     @include flex-ctr;
     grid-column: 1;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 77px);
     width: 100%;
     position: sticky;
-    top: 100px;
+    top: 77px;
     bottom: 0;
     padding: 0 40px;
+    border: solid 1.7pt $black;
+    border-left: none;
+    border-bottom: none;
         & .header {
             @include flex-col;
             width: 100%;
                 &__brand {
                     align-self: flex-start;
-                    text-transform: uppercase;
-                    font-size: 3em;
-                    font-weight: 300;
+                    font-size: 2.7em;
+                    background: $dark;
                     padding: 1pt 14pt;
                     border: solid 0.07em $white;
+                    box-shadow: 14pt 14pt 0 $black;
                 }
                 &__text {
                     align-self: flex-end;
+                    color: $white;
                     font-size: 1.1em;
                     font-weight: 300;
                     line-height: 1.4em;

@@ -1,32 +1,72 @@
 .productInfo {
+    position: relative;
+    z-index: 4;
     margin-left: 70px;
 }
 .productBox {
     @include flex-col;
+    flex-direction: column;
     width: 100%;
-        & img {
+    margin-top: 40px;
+    background: $darker;
+    box-shadow: 17pt 17pt 0 $black;
+    border: solid 7pt $dark;
+        &__img {
             max-height: 400px;
         }
         &-data {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             height: 100%;
-            padding: 40px 0;
-                & h3 {
+            padding: 30px;
+            border-top: solid 10pt $light;
+                &__heading {
+                    grid-column: 1;
                     display: inline-block;
-                    justify-self: center;
-                    align-self: center;
                     font-size: 1.4em;
                     font-weight: 700;
                     padding: 0;
                 }
-                & p {
+                &__text {
+                    grid-column: 1;
+                    font-size: 15pt;
+                    font-weight: 300;
                     max-width: 400px;
                     margin-top: 10px;
                     line-height: 1.4em;
                 }
-                & h4 {
-                    font-size: 1.3em;
+                &__price {
+                    grid-column: 1;
+                    font-size: 1.17em;
                     font-weight: 700;
                     margin-top: 14pt;
+                }
+                & .addToCart {
+                    grid-column: 2;
+                    grid-row: 3;
+                    margin: auto 0;
+                    justify-self: flex-end;
+                    align-self: flex-end;
+                    background: transparent;
+                    font-size: 14pt;
+                    padding: 7pt 10pt;
+                    border: solid 0.17em $dark;
+                    transition: border-color 140ms ease-in-out, background-color 140ms ease-in-out;
+                        &:hover {
+                            border-color: $light;
+                            background-color: $dark;
+                        }
+                }
+                & .selectOption {
+                    grid-column: 2;
+                    grid-row: 2;
+                    width: 200px;
+                    justify-self: flex-end;
+                    align-self: flex-start;
+                    font-size: 14pt;
+                    padding: 4pt;
+                    background: $dark;
+                    border: solid 1.7pt $white;
                 }
         }
 }
