@@ -13,11 +13,8 @@ nav {
     border-top: none;
     border-bottom: none;
         & a {
-            text-transform: uppercase;
             color: $white;
-            font-size: 13pt;
-            letter-spacing: 0.04em;
-            padding: 0 4pt 0.3em 4pt;
+            padding: 0 0.1em 0.3em 0.1em;
             border-bottom: solid 0.14em $dark;
             transition: border-color 200ms ease-in-out;
                 &:hover {

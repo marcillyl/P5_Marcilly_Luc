@@ -9,7 +9,7 @@
     width: 100%;
     margin-top: 40px;
     background: $darker;
-    box-shadow: 17pt 17pt 0 $black;
+    box-shadow: 14pt 14pt 0 $black;
     border: solid 7pt $dark;
         &__img {
             max-height: 400px;
@@ -29,7 +29,6 @@
                 }
                 &__text {
                     grid-column: 1;
-                    font-size: 15pt;
                     font-weight: 300;
                     max-width: 400px;
                     margin-top: 10px;
@@ -48,7 +47,6 @@
                     justify-self: flex-end;
                     align-self: flex-end;
                     background: transparent;
-                    font-size: 14pt;
                     padding: 7pt 10pt;
                     border: solid 0.17em $dark;
                     transition: border-color 140ms ease-in-out, background-color 140ms ease-in-out;
@@ -57,13 +55,12 @@
                             background-color: $dark;
                         }
                 }
-                & .selectOption {
+                & .selectLense {
                     grid-column: 2;
                     grid-row: 2;
                     width: 200px;
                     justify-self: flex-end;
                     align-self: flex-start;
-                    font-size: 14pt;
                     padding: 4pt;
                     background: $dark;
                     border: solid 1.7pt $white;
