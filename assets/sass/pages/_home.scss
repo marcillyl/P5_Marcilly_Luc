@@ -4,29 +4,19 @@
     z-index: 4;
     grid-column: 2;
     width: 100%;
-    padding: 77px 70px 100px 70px;
-    margin-top: -77px;
+    padding: 70px 70px 100px 70px;
+    margin-top: -70px;
         & > a {
             display: grid;
             grid-template-columns: 4.1fr 3.4fr;
-            margin: 40px 0;
-            background: $darker;
+            margin: 30px 0;
+            background: #efe5de;
             flex-direction: column;
             justify-content: space-between;
-            border: solid 7pt $dark;
-            box-shadow: 14pt 14pt 0 $black;
-            transition: box-shadow 240ms ease-in-out;
-            animation: fadeIn 1s ease-in-out both;
-            &:hover {
-                box-shadow: 10pt 10pt 0 $black;
-            }
+            box-shadow: inset -7pt 0 37pt #000000a0;
+            animation: fadeIn 700ms ease-in-out both 700ms;
             &:hover h3 {
-                color: $light;
-                border-color: $light;
-            }
-            &:hover i {
-                transform: translateY(-4pt);
-                opacity: 1;
+                padding: 1.1em 0.1em;
             }
                 & .shade {
                     grid-column: 2;
@@ -34,39 +24,34 @@
                     z-index: 10;
                     width: 100%;
                     height: 100%;
-                    background: $white;
-                    transition: opacity 240ms ease-in-out;
+                    border-left: solid 13pt $darker;
+                    background: $lighter;
                 }
                 & img {
                     position: relative;
                     min-height: 30vh;
                     opacity: 0.7;
-                    transition: opacity 240ms ease-in-out;
                 }
                 & h3 {
                     grid-column: 1;
                     grid-row: 1;
                     display: inline-block;
-                    justify-self: center;
+                    text-align: center;
                     align-self: center;
-                    margin-bottom: 40px;
-                    text-transform: uppercase;
-                    font-size: 1.17em;
-                    padding: 0.14em 4pt;
-                    border: solid 0.14em $dark;
-                    border-left: none;
-                    border-right: none;
-                    transition: border-color 240ms ease-in-out;
+                    background: $darker;
+                    color: $light;
+                    font-size: 1.34em;
+                    font-weight: 300;
+                    padding: 0.47em 0.1em;
+                    transition: padding 240ms ease-in-out;
                 }
-                & i {
-                    grid-column: 1;
-                    grid-row: 1;
-                    justify-self: center;
-                    align-self: center;
-                    font-size: 1.1em;
-                    opacity: 0.17;
-                    margin-top: 3em;
-                    transition: transform 240ms ease-in-out, opacity 240ms ease-in-out;
+                & .alt {
+                    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                    text-transform: uppercase;
+                    color: #545454;
+                    font-size: 0.74em;
+                    font-weight: 400;
+                    margin-right: 0.3em;
                 }
         }
         @for $i from 1 through 10 {
@@ -76,14 +61,17 @@
             & > :nth-child(#{$i}) {
                 @if ($i % 2 == 0) {
                     grid-template-columns: 3.4fr 4.1fr;
+                    box-shadow: inset 7pt 0 37pt #000000a0;
                 }
             }
             & > :nth-child(#{$i}) .shade {
                 @if ($i % 2 == 0) {
                     grid-column: 1;
+                    border-left: none;
+                    border-right: solid 13pt $darker;
                 }
             }
-            & > :nth-child(#{$i}) h3, & > :nth-child(#{$i}) i {
+            & > :nth-child(#{$i}) h3 {
                 @if ($i % 2 == 0) {
                     grid-column: 2;
                 }

@@ -1,4 +1,24 @@
 @font-face {
+    font-family: 'Oswald';
+    src: url('../webfonts/Oswald/static/Oswald-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../webfonts/Oswald/static/Oswald-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../webfonts/Oswald/static/Oswald-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../webfonts/Oswald/static/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
     font-family: 'Roboto';
     src: url('../webfonts/Roboto_Condensed/RobotoCondensed-Light.ttf') format('truetype');
     font-weight: 300;
@@ -10,17 +30,13 @@
 }
 @font-face {
     font-family: 'Roboto';
-    src: url() format('truetype');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'Roboto';
     src: url('../webfonts/Roboto_Condensed/RobotoCondensed-Bold.ttf') format('truetype');
     font-weight: 700;
 }
 body, input, select, textarea, button {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
     color: $white;
+    font-size: 14pt;
 }
 a {
     cursor: pointer;
@@ -30,7 +46,13 @@ a {
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
 }
+p {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
 ul {
     list-style-type: none;
     padding: 0;
+}
+.gold {
+    color: $light;
 }

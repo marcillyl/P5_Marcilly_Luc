@@ -9,61 +9,78 @@
     width: 100%;
     margin-top: 40px;
     background: $darker;
-    box-shadow: 14pt 14pt 0 $black;
-    border: solid 7pt $dark;
+    border: solid 4pt $lighter;
+    animation: fadeIn 440ms ease-in-out both 170ms;
         &__img {
-            max-height: 400px;
+            max-height: 370px;
         }
         &-data {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            background: $darker;
             height: 100%;
-            padding: 30px;
-            border-top: solid 10pt $light;
+            padding: 30px 40px 30px 30px;
+            border-top: solid 17pt $lighter;
                 &__heading {
                     grid-column: 1;
                     display: inline-block;
-                    font-size: 1.4em;
-                    font-weight: 700;
-                    padding: 0;
+                    color: $light;
+                    font-size: 1.57em;
+                    font-weight: 300;
                 }
                 &__text {
                     grid-column: 1;
-                    font-weight: 300;
                     max-width: 400px;
                     margin-top: 10px;
                     line-height: 1.4em;
                 }
                 &__price {
                     grid-column: 1;
-                    font-size: 1.17em;
+                    font-size: 1.1em;
                     font-weight: 700;
                     margin-top: 14pt;
                 }
                 & .addToCart {
+                    cursor: pointer;
                     grid-column: 2;
                     grid-row: 3;
-                    margin: auto 0;
+                    width: 140px;
                     justify-self: flex-end;
                     align-self: flex-end;
-                    background: transparent;
-                    padding: 7pt 10pt;
-                    border: solid 0.17em $dark;
-                    transition: border-color 140ms ease-in-out, background-color 140ms ease-in-out;
+                    background: $dark;
+                    color: $white;
+                    font-size: 1.4em;
+                    padding: 7pt 0;
+                    border: none;
+                    box-shadow: 7pt 7pt 0 $black;
+                    transition: color 240ms ease-in-out;
+                        & i {
+                            transition: transform 240ms ease-in-out;
+                        }
                         &:hover {
-                            border-color: $light;
-                            background-color: $dark;
+                            color: $light;
+                        }
+                        &:hover i {
+                            transform: rotate(180deg);
                         }
                 }
                 & .selectLense {
+                    cursor: pointer;
                     grid-column: 2;
-                    grid-row: 2;
+                    grid-row: 1;
                     width: 200px;
                     justify-self: flex-end;
                     align-self: flex-start;
-                    padding: 4pt;
+                    padding: 7pt;
                     background: $dark;
-                    border: solid 1.7pt $white;
+                    color: $white;
+                    font-size: 13pt;
+                    border: none;
+                    box-shadow: 7pt 7pt 0 $black;
+                    transition: color 200ms ease-in-out;
+                        &:hover {
+                            color: $light;
+                        }
                 }
         }
 }
