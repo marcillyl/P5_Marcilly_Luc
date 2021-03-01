@@ -6,4 +6,19 @@
 @mixin flex-col {
     display: flex;
     flex-direction: column;
-}
+};
+@mixin small {
+    @media screen and (max-width: 540px) {
+        @content
+    }
+};
+@mixin medium {
+    @media screen and (max-width: 770px) {
+        @content
+    }
+};
+@mixin large {
+    @media screen and (max-width: 1040px) {
+        @content
+    }
+};

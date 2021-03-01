@@ -37,6 +37,9 @@ body, input, select, textarea, button {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
     color: $white;
     font-size: 14pt;
+    @include small {
+        font-size: 13pt;
+    }
 }
 a {
     cursor: pointer;
