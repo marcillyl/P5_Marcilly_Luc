@@ -1,0 +1,63 @@
+#form {
+    padding: 40px;
+    & h2 {
+        margin-bottom: 40px;
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+    & button {
+        cursor: pointer;
+        outline: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 17px;
+        background-color: $grey;
+        border: none;
+        margin-top: 30px;
+    }
+    & .disabled {
+        cursor: not-allowed;
+        background: $dark;
+        color: #57575a;
+    }
+}
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+        &-bloc {
+            @include flex-col;
+            max-width: 340px;
+            margin-bottom: 10px;
+                & label {
+                    @include flex-ctr;
+                    justify-content: flex-start;
+                    color: #aaaaad;
+                    font-size: 1.1em;
+                        & .fas {
+                            margin-right: 14px;
+                            font-size: 14pt;
+                        }
+                }
+                & input {
+                    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                    cursor: pointer;
+                    padding: 10px;
+                    margin: 10px 0;
+                    background: $dark;
+                    font-size: 1.1em;
+                    border: none;
+                    outline: none;
+                    transition: background-color 100ms ease-in-out;
+                        &:hover, &:focus {
+                            background: $grey;
+                        }
+                }
+        }
+}
+.valid {
+    color: $light;
+}
+.unvalid {
+    color: $grey;
+}

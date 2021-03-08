@@ -2,7 +2,7 @@ main {
     @include medium {
         position: relative;
         height: unset;
-        margin: 130px 0 100px 0;
+        margin: 70px 0 40px 0;
         top: 0;
     }
     @include flex-ctr;
@@ -20,29 +20,24 @@ main {
             @include flex-col;
             width: 100%;
                 &__brand {
-                    @include medium {
-                        align-self: center;
-                    }
-                    align-self: flex-start;
+                    align-self: center;
                     background: $dark;
                     font-size: 3em;
-                    padding: 0 20pt 4pt 20pt;
-                    border: solid 0.07em $white;
-                    box-shadow: 10pt 10pt 0 $black;
+                    font-weight: 700;
+                    padding: 7pt 14pt;
+                    border: solid 1.7pt $white;
                 }
                 &__text {
                     @include medium {
-                        align-self: center;
-                    }
-                    @include small {
-                        max-width: 240px;
+                        display: none;
                     }
                     align-self: flex-end;
                     color: $light;
                     font-size: 1.1em;
+                    line-height: 1.4em;
                     text-align: right;
                     margin-top: 40px;
-                    max-width: 300px;
+                    max-width: 240px;
                 }
         }
 }

@@ -23,17 +23,27 @@
             <main>
                 <header class="header">
                     <h1 class="header__brand">Orinoco<span class="gold">_</span></h1>
-                    <p class="header__text">Praecipitem exitium maioribus causam super exitium iam est exitium arbitror est nobilem.</p>
+                    <p class="header__text">Praecipitem exitium maioribus causam super exitium iam est exitium</p>
                 </header>
             </main>
 
-            <section id="cartContent">
-
+            <section id="cartContent" class="cartContent">
+                <h2>Cart content</h2>
+                <div id="cartContainer" class="cartContainer">
+                    <div class="cartContainer-buttons">
+                        <button onclick="clearCart()">Clear</button>
+                        <a href="checkout.html"><button>Checkout</button></a>
+                    </div>
+                    <div class="cartContainer-pane cartContainer-pane--total">
+                        <p class="totalText">Total</p>
+                        <h4 id="totalPrice" class="totalPrice"></h4>
+                    </div>
+                </div>
             </section>
-            
+
         </div>
 
-        <script type="text/javascript" src="assets/js/scriptCart.js"></script>
+        <script type="text/javascript" src="assets/js/cart.js"></script>
         <script type="text/javascript" src="assets/js/style.js"></script>
 
     </body>

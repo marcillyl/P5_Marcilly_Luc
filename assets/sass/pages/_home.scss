@@ -8,6 +8,7 @@
     z-index: 4;
     grid-column: 2;
     width: 100%;
+    padding-bottom: 40px;
         & > a {
             @include small {
                 grid-template-columns: unset;
@@ -19,15 +20,16 @@
             }
             display: grid;
             grid-template-columns: 4.1fr 3.4fr;
-            margin: 40px;
+            margin: 40px 40px 0 40px;
             max-width: 700px;
             background: $lighter;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: inset -7pt 0 37pt #000000a0;
-            animation: fadeIn 700ms ease-in-out both 700ms;
+            border: solid 7.7pt #2a2a2d;
+            box-shadow: inset -7pt 0 34pt #00000077;
+            animation: fadeIn 700ms ease-in-out both 400ms;
             &:hover h3 {
-                padding: 1.1em 0.1em;
+                padding: 1.7em 0.1em;
             }
                 & .shade {
                     @include small {
@@ -41,7 +43,7 @@
                     z-index: 10;
                     width: 100%;
                     height: 100%;
-                    border-left: solid 13pt $dark;
+                    border-left: solid 17pt #2a2a2d;
                     background: $light;
                 }
                 & img {
@@ -51,7 +53,7 @@
                         min-height: unset;
                     }
                     position: relative;
-                    min-height: 270px;
+                    min-height: 247px;
                     opacity: 0.7;
                 }
                 & h3 {
@@ -65,16 +67,16 @@
                     display: inline-block;
                     text-align: center;
                     align-self: center;
-                    background: $dark;
+                    background: #2a2a2d;
                     color: $light;
                     font-size: 1.3em;
-                    padding: 0.47em 0.1em;
+                    padding: 1em 0.1em;
                     transition: padding 240ms ease-in-out;
                 }
                 & .alt {
-                    text-transform: uppercase;
-                    color: #5a5a5a;
-                    font-size: 0.77em;
+                    text-transform: lowercase;
+                    color: #707070;
+                    font-size: 14pt;
                     margin-right: 0.3em;
                 }
         }
@@ -88,7 +90,7 @@
                         grid-template-columns: unset;
                     }
                     grid-template-columns: 3.4fr 4.1fr;
-                    box-shadow: inset 7pt 0 37pt #000000a0;
+                    box-shadow: inset 7pt 0 34pt #00000077;
                 }
             }
             & > :nth-child(#{$i}) .shade {
@@ -101,7 +103,7 @@
                     }
                     grid-column: 1;
                     border-left: none;
-                    border-right: solid 13pt $dark;
+                    border-right: solid 17pt #2a2a2d;
                 }
             }
             & > :nth-child(#{$i}) h3 {

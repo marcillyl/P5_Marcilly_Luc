@@ -1,4 +1,4 @@
-const vCam = ['http://localhost:3000/api/cameras']
+const vCam = ['http://localhost:3000/api/cameras/']
 
 function displayProductInfo (product) {
     let productLenses = product.lenses;
@@ -66,12 +66,11 @@ function addToCart () {
 };
 
 async function main () {
-    const cameras = await fetch(vCam)
-        .then ((response) => response.json());
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const productId = urlParams.get("productId");
-    const product = cameras.find(elem => elem._id === productId);
+    const product = await fetch(vCam + productId)
+        .then((response) => response.json());
     displayProductInfo(product);
 };
 

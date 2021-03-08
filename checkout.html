@@ -23,17 +23,41 @@
             <main>
                 <header class="header">
                     <h1 class="header__brand">Orinoco<span class="gold">_</span></h1>
-                    <p class="header__text">Praecipitem exitium maioribus causam super exitium iam est exitium arbitror est nobilem.</p>
+                    <p class="header__text">Praecipitem exitium maioribus causam super exitium iam est exitium</p>
                 </header>
             </main>
 
-            <section id="productList">
+            <section id="form">
+                <h2>Information</h2>
+                <form method="POST" action="assets/js/checkout.js" class="form">
+                    <div class="form-bloc">
+                        <label for="firstName"><i class="firstName--icon fas fa-check unvalid"></i>First name</label>
+                        <input type="text" name="firstName" id="firstName" pattern="" required>
+                    </div>
+                    <div class="form-bloc">
+                        <label for="lastName"><i class="lastName--icon fas fa-check unvalid"></i>Last name</label>
+                        <input type="text" name="lastName" id="lastName" pattern="" required>
+                    </div>
+                    <div class="form-bloc">
+                        <label for="address"><i class="address--icon fas fa-check unvalid"></i>Address</label>
+                        <input type="text" name="address" id="address" pattern="" required>
+                    </div>
+                    <div class="form-bloc">
+                        <label for="city"><i class="city--icon fas fa-check unvalid"></i>City</label>
+                        <input type="text" name="city" id="city" pattern="" required>
+                    </div>
+                    <div class="form-bloc">
+                        <label for="email"><i class="email--icon fas fa-check unvalid"></i>Email</label>
+                        <input type="email" name="email" id="email" pattern="" required>
+                    </div>
+                </form>
+                <button id="button" onclick="confirmPurchase()" class="disabled" disabled>Confirm purchase</button>
 
             </section>
 
         </div>
 
-        <script type="text/javascript" src="assets/js/scriptCheckout.js"></script>
+        <script type="text/javascript" src="assets/js/checkout.js"></script>
         <script type="text/javascript" src="assets/js/style.js"></script>
 
     </body>
