@@ -68,16 +68,13 @@
                     background: $dark;
                     color: $light;
                     font-size: 1.3em;
-                    font-weight: 300;
                     padding: 0.47em 0.1em;
                     transition: padding 240ms ease-in-out;
                 }
                 & .alt {
-                    font-family: 'Roboto', Arial, Helvetica, sans-serif;
                     text-transform: uppercase;
                     color: #5a5a5a;
                     font-size: 0.77em;
-                    font-weight: 400;
                     margin-right: 0.3em;
                 }
         }

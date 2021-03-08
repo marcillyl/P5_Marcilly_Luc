@@ -45,18 +45,15 @@
                     display: inline-block;
                     color: $light;
                     font-size: 1.57em;
-                    font-weight: 300;
                 }
                 &__text {
                     grid-column: 1;
                     max-width: 400px;
                     margin-top: 10px;
-                    line-height: 1.3em;
                 }
                 &__price {
                     grid-column: 1;
                     font-size: 1.1em;
-                    font-weight: 700;
                     margin-top: 14pt;
                 }
                 & .addToCart {
