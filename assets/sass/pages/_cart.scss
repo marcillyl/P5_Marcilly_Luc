@@ -5,7 +5,7 @@
     }
     @include flex-col;
     padding: 40px;
-    animation: fadeIn 400ms ease-in-out 100ms;
+    animation: fadeIn 400ms ease-in-out both 100ms;
         & h2 {
             margin-bottom: 40px;
             font-size: 1.7em;
@@ -17,11 +17,6 @@
     flex-direction: column-reverse;
     justify-content: center;
     max-width: 700px;
-    @for $i from 1 through 10 {
-        & > :nth-child(#{$i}) {
-            animation-delay: $i * 100ms;
-        }
-    }
     &-buttons {
         @include medium {
             align-self: flex-start;
@@ -49,7 +44,7 @@
         width: 100%;
         justify-items: flex-start;
         align-items: center;
-        animation: fadeIn 300ms ease-in-out both;
+        animation: fadeIn 400ms ease-in-out both 170ms;
             &__heading {
                 justify-self: flex-start;
                 margin-left: 30px;

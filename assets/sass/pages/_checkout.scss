@@ -8,7 +8,7 @@
     & button {
         cursor: pointer;
         outline: none;
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 500;
         padding: 17px;
         background-color: $grey;
@@ -33,7 +33,6 @@
                     @include flex-ctr;
                     justify-content: flex-start;
                     color: #aaaaad;
-                    font-size: 1.1em;
                         & .fas {
                             margin-right: 14px;
                             font-size: 14pt;

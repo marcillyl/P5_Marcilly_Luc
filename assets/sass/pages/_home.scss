@@ -25,8 +25,8 @@
             background: $lighter;
             flex-direction: column;
             justify-content: space-between;
-            border: solid 7.7pt #2a2a2d;
-            box-shadow: inset -7pt 0 34pt #00000077;
+            border: solid 10pt #2a2a2d;
+            box-shadow: inset -7pt 0 34pt #000000aa;
             animation: fadeIn 700ms ease-in-out both 400ms;
             &:hover h3 {
                 padding: 1.7em 0.1em;
@@ -53,7 +53,7 @@
                         min-height: unset;
                     }
                     position: relative;
-                    min-height: 247px;
+                    min-height: 240px;
                     opacity: 0.7;
                 }
                 & h3 {
@@ -69,14 +69,14 @@
                     align-self: center;
                     background: #2a2a2d;
                     color: $light;
-                    font-size: 1.3em;
+                    font-size: 1.2em;
                     padding: 1em 0.1em;
                     transition: padding 240ms ease-in-out;
                 }
                 & .alt {
                     text-transform: lowercase;
                     color: #707070;
-                    font-size: 14pt;
+                    font-size: 13pt;
                     margin-right: 0.3em;
                 }
         }
@@ -90,7 +90,7 @@
                         grid-template-columns: unset;
                     }
                     grid-template-columns: 3.4fr 4.1fr;
-                    box-shadow: inset 7pt 0 34pt #00000077;
+                    box-shadow: inset 7pt 0 34pt #000000aa;
                 }
             }
             & > :nth-child(#{$i}) .shade {
