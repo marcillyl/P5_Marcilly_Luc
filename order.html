@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/css/all.min.css" />
         <link rel="stylesheet" href="assets/css/main.min.css" />
-        <title>Home</title>
+        <title>Order</title>
     </head>
     <body>
         <div class="navPane"></div>
         <div class="container">
             <nav>
-                <a href="#">Home</a>
+                <a href="home.html">Home</a>
                 <a href="cart.html">Cart</a>
                 <a href="checkout.html">Checkout</a>
             </nav>
@@ -21,10 +21,17 @@
                     <p class="header__text">Buy it. Use it. <em>Recycle it.</em></p>
                 </header>
             </main>
-            <section id="productList" class="productList">
+            <section id="order" class="order">
+                <h2>Order status</h2>
+                <div id="order-container" class="order-container">
+                    <h3><i class="far fa-check-circle"></i> Your order has been confirmed !</h3>
+                    <div id="order-info" class="order-info">
+                    </div>
+                    <h3>Thanks !</h3>
+                </div>
             </section>
         </div>
-        <script type="text/javascript" src="assets/js/home.js"></script>
+        <script type="text/javascript" src="assets/js/order.js"></script>
         <script type="text/javascript" src="assets/js/style.js"></script>
     </body>
 </html>
