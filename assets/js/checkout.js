@@ -19,10 +19,14 @@ function checkInputs (elem) {
 }
 
 function buttonEnable () {
-    if ((firstName, lastName, address, city, email).checkValidity()) {
-        button.classList.remove('disabled');
-        button.disabled = false;
-    } else {
+    if (firstName.checkValidity()
+        && lastName.checkValidity()
+        && address.checkValidity()
+        && city.checkValidity()
+        && email.checkValidity()) {
+            button.classList.remove('disabled');
+            button.disabled = false;
+        } else {
         button.classList.add('disabled');
         button.disabled = true;
     }
@@ -41,4 +45,17 @@ function confirmPurchase () {
             Object.keys(localStorage)
         ]
     }
+    const request = {
+        method: 'POST',
+        body: JSON.stringify(order),
+        headers: {'Content-Type': 'application/json'}
+    }
+    fetch('http://localhost:3000/api/cameras/order', request)
+        .then (response => response.json())
+        .then ((json => {
+            window.location.href = `./order.html?orderId=${json.orderId}`
+            console.log(json)
+        }))
 }
+
+buttonEnable();
