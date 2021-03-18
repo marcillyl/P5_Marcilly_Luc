@@ -13,16 +13,17 @@
     }
     @include flex-col;
     flex-direction: column;
-    max-width: 770px;
+    background: $two;
+    max-width: 510pt;
     margin: 40px;
-    background: $dark;
-    border: solid 0.17em $lighter;
+    border: solid 1.7pt $seven;
+    box-shadow: 1pt 1pt 10pt #000000dd;
     animation: fadeIn 400ms ease-in-out both 140ms;
         &__img {
             @include small {
                 max-height: unset;
             }
-            max-height: 370px;
+            max-height: 340px;
         }
         &-data {
             @include small {
@@ -32,64 +33,59 @@
             }
             display: grid;
             grid-template-columns: 1fr 1fr;
-            background: $dark;
             height: 100%;
             padding: 30px 40px 30px 30px;
-            border-top: solid 14pt $lighter;
+            border-top: solid 14pt $seven;
                 &__heading {
                     grid-column: 1;
                     display: inline-block;
-                    color: $light;
-                    font-size: 1.5em;
-                    font-weight: 700;
+                    color: $six;
+                    font-size: 17pt;
                 }
                 &__text {
+                    @include small {
+                        margin-top: 10pt;
+                    }
                     grid-column: 1;
-                    max-width: 400px;
-                    margin-top: 10px;
+                    max-width: 270px;
+                    margin-top: 3pt;
+                    font-size: 11pt;
+                    letter-spacing: 0.04em;
+                    line-height: 1.6em;
                 }
                 &__price {
                     grid-column: 1;
-                    margin-top: 14pt;
-                    font-size: 1.2em;
-                    font-weight: 700;
+                    margin-top: 13pt;
+                    font-size: 15pt;
+                    font-weight: 500;
                 }
                 & .addToCart {
                     @include small {
                         grid-column: unset;
                         grid-row: unset;
                         margin: 30px 0;
-                        padding: 4pt 0;
-                        width: 130px;
                     }
                     cursor: pointer;
                     grid-column: 2;
                     grid-row: 3;
-                    width: 130px;
+                    width: 120px;
                     justify-self: flex-end;
                     align-self: flex-end;
-                    background: $grey;
-                    color: $white;
-                    font-size: 1.4em;
-                    padding: 7.7pt 0;
+                    background: $four;
+                    padding: 7pt 0;
+                    color: $eight;
+                    font-size: 17pt;
                     border: none;
                     outline: none;
-                    transition: color 200ms ease-in-out;
-                        & i {
-                            transition: transform 200ms ease-in-out;
-                        }
-                        &:hover {
-                            color: $light;
-                        }
                         &:hover i {
-                            transform: rotate(180deg);
+                            animation: transX 240ms ease-in-out both;
                         }
                 }
                 & .selectLense {
                     @include small {
                         grid-column: unset;
                         grid-row: unset;
-                        margin-top: 14px;
+                        margin-top: 14pt;
                         padding: 4.7pt;
                     }
                     cursor: pointer;
@@ -99,15 +95,11 @@
                     justify-self: flex-end;
                     align-self: flex-start;
                     padding: 7pt;
-                    background: $grey;
-                    color: $white;
-                    font-size: 1em;
+                    background: $four;
+                    color: $eight;
+                    font-size: 11pt;
                     border: none;
                     outline: none;
-                    transition: color 200ms ease-in-out;
-                        &:hover, &:focus {
-                            color: $light;
-                        }
                 }
         }
 }

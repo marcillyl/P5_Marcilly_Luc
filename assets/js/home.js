@@ -13,7 +13,7 @@ function displayProductList (array) {
         productCard.appendChild(productName);
         cardShade.className = "shade";
         productCard.href = `product.html?productId=${elem._id}`;
-        productName.innerHTML = `<span class="alt">Product_</span> ${elem.name}`
+        productName.innerHTML = `<span class="alt">Product _</span>${elem.name}`
         productImg.src = elem.imageUrl;
     }
 }

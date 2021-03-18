@@ -2,42 +2,45 @@ main {
     @include medium {
         position: relative;
         height: unset;
-        margin: 70px 0 40px 0;
+        margin: 44pt 0 40px 0;
         top: 0;
     }
     @include flex-ctr;
     grid-column: 1;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 44pt);
     width: 100%;
     position: sticky;
-    top: 70px;
-    bottom: 0;
+    top: 44pt;
+    background: $two;
     padding: 0 40px;
-    border: solid 1.4pt $black;
+    border: solid 1.4pt $four;
     border-top: none;
     border-bottom: none;
+    box-shadow: inset 0 1pt 4.7pt #000000dd;
         & .header {
             @include flex-col;
             width: 100%;
                 &__brand {
                     align-self: center;
-                    background: $dark;
-                    font-size: 3em;
-                    font-weight: 700;
-                    padding: 7pt 14pt;
-                    border: solid 1.7pt $white;
+                    padding: 3pt 10pt;
+                    background: $two;
+                    font-size: 34.7pt;
+                    border: solid 1.7pt $seven;
+                    box-shadow: 10pt 10pt 0 $four;
+                        & .gold {
+                            color: $six;
+                            font-weight: 500;
+                        }
                 }
                 &__text {
-                    @include medium {
-                        display: none;
-                    }
-                    align-self: flex-end;
-                    color: $light;
-                    font-size: 1.1em;
-                    line-height: 1.4em;
-                    text-align: right;
-                    margin-top: 40px;
+                    align-self: center;
+                    text-align: center;
+                    margin-top: 20pt;
                     max-width: 240px;
+                    font-size: 14pt;
+                        & em {
+                            color: $six;
+                        }
                 }
         }
 }

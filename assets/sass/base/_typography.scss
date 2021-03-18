@@ -20,12 +20,12 @@
 }
 body, input, select, textarea, button {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: $white;
+    color: $eight;
 }
 a {
     cursor: pointer;
     text-decoration: none;
-    color: $white;
+    color: $eight;
 }
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
@@ -33,7 +33,4 @@ h1, h2, h3, h4, h5, h6, p {
 ul {
     list-style-type: none;
     padding: 0;
-}
-.gold {
-    color: $light;
 }

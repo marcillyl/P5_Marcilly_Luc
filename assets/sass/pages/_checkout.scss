@@ -1,62 +1,68 @@
 #form {
     padding: 40px;
+    animation: fadeIn 400ms ease-in-out both 140ms;
     & h2 {
-        margin-bottom: 40px;
-        font-size: 1.7em;
-        font-weight: 700;
+        margin-bottom: 47px;
+        font-weight: 500;
     }
     & button {
         cursor: pointer;
         outline: none;
-        font-size: 1em;
-        font-weight: 500;
         padding: 17px;
-        background-color: $grey;
+        background-color: $four;
         border: none;
-        margin-top: 30px;
+        margin-top: 47px;
+        font-size: 11pt;
+        letter-spacing: 0.01em;
     }
     & .disabled {
-        cursor: not-allowed;
-        background: $dark;
-        color: #57575a;
+        cursor: default;
+        opacity: 0.3;
     }
 }
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 30px;
+    max-width: 570pt;
+    background: $two;
+    padding: 30px;
+    border: solid 1.4pt $four;
+    box-shadow: 3pt 3pt 7pt #00000077;
         &-bloc {
             @include flex-col;
-            max-width: 340px;
+            max-width: 270px;
             margin-bottom: 10px;
                 & label {
                     @include flex-ctr;
                     justify-content: flex-start;
-                    color: #aaaaad;
+                    color: $eight;
+                    font-size: 11pt;
                         & .fas {
-                            margin-right: 14px;
-                            font-size: 14pt;
+                            margin-right: 10px;
+                            font-size: 12pt;
                         }
                 }
                 & input {
                     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                     cursor: pointer;
-                    padding: 10px;
-                    margin: 10px 0;
-                    background: $dark;
-                    font-size: 1.1em;
-                    border: none;
                     outline: none;
-                    transition: background-color 100ms ease-in-out;
+                    background: transparent;
+                    margin: 7pt 0;
+                    padding: 1.7pt 4.7pt 4.7pt 1.7pt;
+                    font-size: 11pt;
+                    border: none;
+                    border-bottom: solid 1.7pt $five;
+                    transition: border-color 110ms ease-in-out;
                         &:hover, &:focus {
-                            background: $grey;
+                            border-bottom-color: $seven;
                         }
                 }
         }
 }
 .valid {
-    color: $light;
+    color: $six;
 }
 .unvalid {
-    color: $grey;
+    color: $four;
 }

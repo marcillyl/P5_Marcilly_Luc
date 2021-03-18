@@ -7,7 +7,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: $darker;
+    background: $one;
 }
 img {
     object-fit: cover;
@@ -17,7 +17,7 @@ img {
 a {
     cursor: pointer;
     text-decoration: none;
-    color: $white;
+    color: $eight;
 }
 @media screen and (max-width: 480px) {
     html, body {

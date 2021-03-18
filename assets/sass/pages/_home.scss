@@ -11,23 +11,24 @@
     padding-bottom: 40px;
         & > a {
             @include small {
+                align-self: center;
                 grid-template-columns: unset;
-                grid-template-rows: 200px 70px;
-                background: $dark;
-                border: solid 1.7pt $lighter;
-                margin: 30px 17px;
-                box-shadow: unset;
+                grid-template-rows: 170px 44pt;
+                background: $three;
+                border: solid 1.7pt $seven;
+                max-width: 400px;
+                margin: 24px 17px;
             }
             display: grid;
             grid-template-columns: 4.1fr 3.4fr;
             margin: 40px 40px 0 40px;
-            max-width: 700px;
-            background: $lighter;
+            max-width: 510pt;
+            background: $seven;
             flex-direction: column;
             justify-content: space-between;
-            border: solid 10pt #2a2a2d;
-            box-shadow: inset -7pt 0 34pt #000000aa;
-            animation: fadeIn 700ms ease-in-out both 400ms;
+            border: solid 10pt $three;
+            box-shadow: 1pt 1pt 10pt #00000077;
+            animation: fadeIn 700ms ease-in-out both 170ms;
             &:hover h3 {
                 padding: 1.7em 0.1em;
             }
@@ -36,15 +37,15 @@
                         border: unset;
                         grid-column: unset;
                         grid-row: 1;
-                        border-bottom: solid 10pt $lighter;
+                        border-bottom: solid 10pt $seven;
                     }
                     grid-column: 2;
                     position: relative;
                     z-index: 10;
                     width: 100%;
                     height: 100%;
-                    border-left: solid 17pt #2a2a2d;
-                    background: $light;
+                    border-left: solid 17pt $three;
+                    background: $six;
                 }
                 & img {
                     @include small {
@@ -53,7 +54,7 @@
                         min-height: unset;
                     }
                     position: relative;
-                    min-height: 240px;
+                    min-height: 210px;
                     opacity: 0.7;
                 }
                 & h3 {
@@ -67,16 +68,18 @@
                     display: inline-block;
                     text-align: center;
                     align-self: center;
-                    background: #2a2a2d;
-                    color: $light;
-                    font-size: 1.2em;
+                    background: $three;
                     padding: 1em 0.1em;
-                    transition: padding 240ms ease-in-out;
+                    color: $six;
+                    font-size: 14pt;
+                    box-shadow: inset 4pt 4pt 20pt #00000077;
+                    transition: padding 200ms ease-in-out;
                 }
                 & .alt {
                     text-transform: lowercase;
-                    color: #707070;
-                    font-size: 13pt;
+                    color: $eight;
+                    font-size: 11pt;
+                    opacity: 0.4;
                     margin-right: 0.3em;
                 }
         }
@@ -90,20 +93,19 @@
                         grid-template-columns: unset;
                     }
                     grid-template-columns: 3.4fr 4.1fr;
-                    box-shadow: inset 7pt 0 34pt #000000aa;
                 }
             }
             & > :nth-child(#{$i}) .shade {
                 @if ($i % 2 == 0) {
                     @include small {
                         border: none;
-                        border-bottom: solid 10pt $lighter;
+                        border-bottom: solid 10pt $seven;
                         grid-column: unset;
                         grid-row: 1;
                     }
                     grid-column: 1;
                     border-left: none;
-                    border-right: solid 17pt #2a2a2d;
+                    border-right: solid 17pt $three;
                 }
             }
             & > :nth-child(#{$i}) h3 {
