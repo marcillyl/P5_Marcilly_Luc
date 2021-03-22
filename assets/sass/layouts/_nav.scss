@@ -16,6 +16,9 @@ nav {
     border: solid 1.4pt $four;
     border-top: none;
     & a {
+        @include small {
+            font-size: 10pt
+        }
         @include flex-ctr;
         width: 100%;
         height: 100%;

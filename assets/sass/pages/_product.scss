@@ -37,6 +37,9 @@
         padding: 30px 40px 30px 30px;
         border-top: solid 14pt $seven;
         &__heading {
+            @include small {
+                font-size: 15pt;
+            }
             grid-column: 1;
             display: inline-block;
             color: $six;
@@ -45,6 +48,7 @@
         &__text {
             @include small {
                 margin-top: 10pt;
+                line-height: 1.5em;
             }
             grid-column: 1;
             max-width: 270px;
@@ -54,6 +58,9 @@
             line-height: 1.6em;
         }
         &__price {
+            @include small {
+                font-size: 14pt;
+            }
             grid-column: 1;
             margin-top: 13pt;
             font-size: 15pt;
@@ -64,6 +71,8 @@
                 grid-column: unset;
                 grid-row: unset;
                 margin: 30px 0;
+                font-size: 15pt;
+                width: 110px;
             }
             cursor: pointer;
             grid-column: 2;

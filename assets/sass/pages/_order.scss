@@ -1,4 +1,7 @@
 .order {
+    @include small {
+        padding: 30px 17px;
+    }
     @include flex-col;
     justify-self: flex-start;
     align-self: flex-start;

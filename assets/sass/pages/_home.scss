@@ -14,10 +14,10 @@
             align-self: center;
             grid-template-columns: unset;
             grid-template-rows: 170px 44pt;
-            background: $three;
             border: solid 1.7pt $seven;
             max-width: 400px;
             margin: 24px 17px;
+            background: $four;
         }
         display: grid;
         grid-template-columns: 4.1fr 3.4fr;
@@ -62,6 +62,7 @@
                 grid-column: unset;
                 grid-row: 2;
                 background: unset;
+                font-size: 13pt;
             }
             grid-column: 1;
             grid-row: 1;

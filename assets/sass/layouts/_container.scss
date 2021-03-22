@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 440px auto;
     @include large {
-        grid-template-columns: 370px auto;
+        grid-template-columns: 340px auto;
     };
     @include medium {
         grid-template-columns: unset;

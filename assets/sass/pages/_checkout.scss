@@ -1,4 +1,7 @@
 #form {
+    @include small {
+        padding: 30px 17px;
+    }
     padding: 40px;
     animation: fadeIn 400ms ease-in-out both 140ms;
     & h2 {
@@ -17,6 +20,10 @@
     }
 }
 .form {
+    @include small {
+        grid-template-columns: unset;
+        gap: 0;
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 30px;
