@@ -19,87 +19,87 @@
     border: solid 1.7pt $seven;
     box-shadow: 1pt 1pt 10pt #000000dd;
     animation: fadeIn 400ms ease-in-out both 140ms;
-        &__img {
-            @include small {
-                max-height: unset;
-            }
-            max-height: 340px;
+    &__img {
+        @include small {
+            max-height: unset;
         }
-        &-data {
-            @include small {
-                grid-template-columns: unset;
-                padding: 17px 17px 0 17px;
-                border-top-width: 10pt;
-            }
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 100%;
-            padding: 30px 40px 30px 30px;
-            border-top: solid 14pt $seven;
-                &__heading {
-                    grid-column: 1;
-                    display: inline-block;
-                    color: $six;
-                    font-size: 17pt;
-                }
-                &__text {
-                    @include small {
-                        margin-top: 10pt;
-                    }
-                    grid-column: 1;
-                    max-width: 270px;
-                    margin-top: 3pt;
-                    font-size: 11pt;
-                    letter-spacing: 0.04em;
-                    line-height: 1.6em;
-                }
-                &__price {
-                    grid-column: 1;
-                    margin-top: 13pt;
-                    font-size: 15pt;
-                    font-weight: 500;
-                }
-                & .addToCart {
-                    @include small {
-                        grid-column: unset;
-                        grid-row: unset;
-                        margin: 30px 0;
-                    }
-                    cursor: pointer;
-                    grid-column: 2;
-                    grid-row: 3;
-                    width: 120px;
-                    justify-self: flex-end;
-                    align-self: flex-end;
-                    background: $four;
-                    padding: 7pt 0;
-                    color: $eight;
-                    font-size: 17pt;
-                    border: none;
-                    outline: none;
-                        &:hover i {
-                            animation: transX 240ms ease-in-out both;
-                        }
-                }
-                & .selectLense {
-                    @include small {
-                        grid-column: unset;
-                        grid-row: unset;
-                        margin-top: 14pt;
-                        padding: 4.7pt;
-                    }
-                    cursor: pointer;
-                    grid-column: 2;
-                    grid-row: 1;
-                    width: 200px;
-                    justify-self: flex-end;
-                    align-self: flex-start;
-                    padding: 7pt;
-                    background: $four;
-                    color: $eight;
-                    font-size: 11pt;
-                    border: none;
-                    outline: none;
-                }
+        max-height: 340px;
+    }
+    &-data {
+        @include small {
+            grid-template-columns: unset;
+            padding: 17px 17px 0 17px;
+            border-top-width: 10pt;
         }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        padding: 30px 40px 30px 30px;
+        border-top: solid 14pt $seven;
+        &__heading {
+            grid-column: 1;
+            display: inline-block;
+            color: $six;
+            font-size: 17pt;
+        }
+        &__text {
+            @include small {
+                margin-top: 10pt;
+            }
+            grid-column: 1;
+            max-width: 270px;
+            margin-top: 3pt;
+            font-size: 11pt;
+            letter-spacing: 0.04em;
+            line-height: 1.6em;
+        }
+        &__price {
+            grid-column: 1;
+            margin-top: 13pt;
+            font-size: 15pt;
+            font-weight: 500;
+        }
+        & .addToCart {
+            @include small {
+                grid-column: unset;
+                grid-row: unset;
+                margin: 30px 0;
+            }
+            cursor: pointer;
+            grid-column: 2;
+            grid-row: 3;
+            width: 120px;
+            justify-self: flex-end;
+            align-self: flex-end;
+            background: $four;
+            padding: 7pt 0;
+            color: $eight;
+            font-size: 17pt;
+            border: none;
+            outline: none;
+            &:hover i {
+                animation: transX 240ms ease-in-out both;
+            }
+        }
+        & .selectLense {
+            @include small {
+                grid-column: unset;
+                grid-row: unset;
+                margin-top: 14pt;
+                padding: 4.7pt;
+            }
+            cursor: pointer;
+            grid-column: 2;
+            grid-row: 1;
+            width: 200px;
+            justify-self: flex-end;
+            align-self: flex-start;
+            padding: 7pt;
+            background: $four;
+            color: $eight;
+            font-size: 11pt;
+            border: none;
+            outline: none;
+        }
+    }
 }

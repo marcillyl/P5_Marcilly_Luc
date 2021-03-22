@@ -13,6 +13,11 @@ function navBar () {
         let navLink = document.querySelector("nav :nth-child(3)");
         navLink.classList.add("active");
     }
+    if (localStorage.length === 0) {
+        let navLink = document.querySelector('nav :nth-child(3)');
+        navLink.href = `#`;
+        navLink.classList.add('disabled');
+    }
 }
 
 navBar ();

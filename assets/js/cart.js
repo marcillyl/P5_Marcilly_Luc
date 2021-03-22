@@ -5,44 +5,60 @@ let totalPrice = 0;
 
 async function displayCart () {
 
-    for (let elem of Object.keys(localStorage)) {
+    if (localStorage.length === 0) {
 
-        const productData = await fetch(vCam + elem)
-            .then ((response) => response.json());
-        let productInCart = JSON.parse(localStorage[elem]);
+        let empty = document.createElement('h3');
+        let checkoutLink = document.getElementById('checkoutLink');
+        let checkoutButton = document.getElementById('checkoutButton');
+        cartContainer.appendChild(empty);
+        empty.innerHTML = `Your cart is empty !`;
+        total.innerHTML = `0 €`;
+        checkoutLink.classList.add('disabled');
+        checkoutLink.href = `#`;
+        checkoutButton.disabled = true;
+        checkoutButton.classList.add('disabled');
+        
+    } else {
 
-        for (let i = 0; i < productInCart.length; i++) {
+        for (let elem of Object.keys(localStorage)) {
 
-                let productPane = document.createElement('div');
-                let shade = document.createElement('div');
-                let name = document.createElement('h3');
-                let option = document.createElement('p');
-                let price = document.createElement('p');
-                let img = document.createElement('img');
+            const productData = await fetch(vCam + elem)
+                .then ((response) => response.json());
+            let productInCart = JSON.parse(localStorage[elem]);
 
-                productPane.classList.add('cartContainer-pane');
-                name.classList.add('cartContainer-pane__heading');
-                option.classList.add('cartContainer-pane__text');
-                price.classList.add('cartContainer-pane__price');
-                shade.classList.add('shade');
+            for (let i = 0; i < productInCart.length; i++) {
 
-                cartContainer.appendChild(productPane);
-                productPane.appendChild(shade);
-                shade.appendChild(img);
-                productPane.appendChild(name);
-                productPane.appendChild(option);
-                productPane.appendChild(price);
+                    let productPane = document.createElement('div');
+                    let shade = document.createElement('div');
+                    let name = document.createElement('h3');
+                    let option = document.createElement('p');
+                    let price = document.createElement('p');
+                    let img = document.createElement('img');
 
-            let productPrice = `${productData.price * productInCart[i].quantity / 100} €`
-            let productLense = JSON.stringify(productInCart[i].lense);
-            let quantity = productInCart[i].quantity;
-            totalPrice += (productData.price * productInCart[i].quantity / 100);
-            
-            img.src = productData.imageUrl;
-            name.innerHTML = productData.name;
-            option.innerHTML = `${productLense} x ${quantity}`
-            price.innerHTML = productPrice;
-            total.innerHTML = `${totalPrice} €`
+                    productPane.classList.add('cartContainer-pane');
+                    name.classList.add('cartContainer-pane__heading');
+                    option.classList.add('cartContainer-pane__text');
+                    price.classList.add('cartContainer-pane__price');
+                    shade.classList.add('shade');
+
+                    cartContainer.appendChild(productPane);
+                    productPane.appendChild(shade);
+                    shade.appendChild(img);
+                    productPane.appendChild(name);
+                    productPane.appendChild(option);
+                    productPane.appendChild(price);
+
+                let productPrice = `${productData.price * productInCart[i].quantity / 100} €`
+                let productLense = JSON.stringify(productInCart[i].lense);
+                let quantity = productInCart[i].quantity;
+                totalPrice += (productData.price * productInCart[i].quantity / 100);
+                
+                img.src = productData.imageUrl;
+                name.innerHTML = productData.name;
+                option.innerHTML = `${productLense} x ${quantity}`
+                price.innerHTML = productPrice;
+                total.innerHTML = `${totalPrice} €`
+            }
         }
     }
 }
