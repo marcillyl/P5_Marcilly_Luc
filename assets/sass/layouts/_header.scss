@@ -38,8 +38,9 @@ main {
             align-self: center;
             text-align: center;
             margin-top: 20pt;
-            max-width: 240px;
+            max-width: 270px;
             font-size: 13pt;
+            letter-spacing: 0.03em;
             & em {
                 color: $six;
             }
