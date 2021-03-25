@@ -15,19 +15,24 @@
     flex-direction: column-reverse;
     justify-content: center;
     max-width: 510pt;
-    &-buttons {
-        @include medium {
-            align-self: flex-start;
+    & > h3 {
+        @include small {
+            font-size: 12pt;
         }
+        font-size: 13pt;
+    }
+    &-buttons {
         margin-top: 30px;
         & button {
+            @include small {
+                margin: 10px 30px 40px 0;
+            }
             cursor: pointer;
-            background: $three;
+            background: $four;
             border: none;
             padding: 14px 30px;
             margin: 10px 40px 40px 0;
             font-size: 11pt;
-            letter-spacing: 0.01em;
             transition: background-color 200ms ease-in-out;
             &:hover {
                 background: $five;
@@ -36,10 +41,10 @@
     }
     &-pane {
         @include small {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1.7fr 2fr 1fr;
             justify-content: center;
             padding: 17px 0;
-            border-left: solid 14pt $seven;
+            border-left: solid 10pt $seven;
         }
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 1fr;
@@ -48,48 +53,53 @@
         width: 100%;
         justify-items: flex-start;
         align-items: center;
-        &__heading {
-            @include small {
-                margin-left: 17px;
-                font-size: 12pt;
-            }
-            justify-self: flex-start;
-            margin-left: 30px;
-            font-size: 14pt;
-        }
-        &__text {
+        & :nth-child(n) {
             @include small {
                 font-size: 11pt;
             }
-            margin-left: 17px;
+            display: block;
+        }
+        &__heading {
+            margin-left: 10px;
+            font-size: 13pt;
+        }
+        &__text {
+            margin: 0 10px;
+            font-size: 12pt;
         }
         &__price {
-            @include small {
-                font-size: 12pt;
-            }
-            margin-left: 17px;
-            font-weight: 500;
+            margin-right: 10px;
+            font-size: 12pt;
         }
         &--total {
+            @include small {
+                margin-top: 10px;
+                padding-right: unset;
+            }
             background: transparent;
             border: none;
-            margin: 30px 0 0 17px;
+            padding-right: 30px;
+            margin-top: 30px;
             color: $six;
             & .totalText {
                 @include small {
                     grid-column: 2;
+                    font-size: 13pt;
                 }
                 grid-column: 3;
-                text-transform: uppercase;
-                font-size: 13pt;
+                margin-left: 17px;
+                font-size: 14pt;
                 font-weight: 500;
             }
             & .totalPrice {
                 @include small {
                     grid-column: 3;
+                    font-size: 12pt;
                 }
                 grid-column: 4;
-                font-size: 13pt;
+                justify-self: flex-end;
+                margin-right: 17px;
+                font-size: 14pt;
                 font-weight: 500;
             }
         }

@@ -12,9 +12,8 @@ main {
     width: 100%;
     position: sticky;
     top: 44pt;
-    background: $two;
     padding: 0 40px;
-    border: solid 1.4pt $four;
+    border: solid 1.7pt $five;
     border-top: none;
     border-bottom: none;
     & .header {
@@ -22,14 +21,14 @@ main {
         width: 100%;
         &__brand {
             @include small {
-                font-size: 33pt;
+                font-size: 30pt;
             }
             align-self: center;
-            padding: 3pt 10pt;
-            background: $two;
-            font-size: 37pt;
+            padding: 4pt 13pt;
+            background: $three;
+            font-size: 34pt;
+            letter-spacing: normal;
             border: solid 1.7pt $seven;
-            box-shadow: 10pt 10pt 0 $four;
             & .gold {
                 color: $six;
                 font-weight: 500;
@@ -37,14 +36,14 @@ main {
         }
         &__text {
             @include small {
-                font-size: 12pt;
+                margin-top: 12pt;
+                font-size: 13pt;
             }
             align-self: center;
             text-align: center;
-            margin-top: 20pt;
-            max-width: 270px;
-            font-size: 13pt;
-            letter-spacing: 0.03em;
+            margin-top: 17pt;
+            max-width: 300px;
+            font-size: 14pt;
             & em {
                 color: $six;
             }

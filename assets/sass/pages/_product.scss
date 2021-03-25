@@ -9,15 +9,13 @@
     @include small {
         width: 100%;
         margin: 30px auto;
-        border-width: 1.7pt;
     }
     @include flex-col;
     flex-direction: column;
-    background: $two;
+    background: $three;
     max-width: 510pt;
     margin: 40px;
-    border: solid 1.7pt $seven;
-    box-shadow: 1pt 1pt 10pt #000000dd;
+    border: solid 4pt $five;
     animation: fadeIn 400ms ease-in-out both 140ms;
     &__img {
         @include small {
@@ -29,13 +27,13 @@
         @include small {
             grid-template-columns: unset;
             padding: 17px 17px 0 17px;
-            border-top-width: 10pt;
+            border-top-width: 11.7pt;
         }
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 100%;
         padding: 30px 40px 30px 30px;
-        border-top: solid 14pt $seven;
+        border-top: solid 14pt $five;
         &__heading {
             @include small {
                 font-size: 15pt;
@@ -54,8 +52,7 @@
             max-width: 270px;
             margin-top: 3pt;
             font-size: 11pt;
-            letter-spacing: 0.04em;
-            line-height: 1.6em;
+            line-height: 1.57em;
         }
         &__price {
             @include small {
@@ -80,7 +77,7 @@
             width: 120px;
             justify-self: flex-end;
             align-self: flex-end;
-            background: $four;
+            background: $five;
             padding: 7pt 0;
             color: $eight;
             font-size: 17pt;
@@ -104,7 +101,7 @@
             justify-self: flex-end;
             align-self: flex-start;
             padding: 7pt;
-            background: $four;
+            background: $five;
             color: $eight;
             font-size: 11pt;
             border: none;

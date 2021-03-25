@@ -12,7 +12,7 @@ async function displayCart () {
         let checkoutButton = document.getElementById('checkoutButton');
         cartContainer.appendChild(empty);
         empty.innerHTML = `Your cart is empty !`;
-        total.innerHTML = `0 €`;
+        total.innerHTML = `0€`;
         checkoutLink.classList.add('disabled');
         checkoutLink.href = `#`;
         checkoutButton.disabled = true;
@@ -48,7 +48,7 @@ async function displayCart () {
                     productPane.appendChild(option);
                     productPane.appendChild(price);
 
-                let productPrice = `${productData.price * productInCart[i].quantity / 100} €`
+                let productPrice = `${productData.price * productInCart[i].quantity / 100}€`
                 let productLense = JSON.stringify(productInCart[i].lense);
                 let quantity = productInCart[i].quantity;
                 totalPrice += (productData.price * productInCart[i].quantity / 100);
@@ -57,7 +57,7 @@ async function displayCart () {
                 name.innerHTML = productData.name;
                 option.innerHTML = `${productLense} x ${quantity}`
                 price.innerHTML = productPrice;
-                total.innerHTML = `${totalPrice} €`
+                total.innerHTML = `${totalPrice}€`
             }
         }
     }

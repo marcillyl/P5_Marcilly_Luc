@@ -21,7 +21,7 @@ async function orderStatus () {
     orderInfo.appendChild(heading);
     orderInfo.appendChild(price);
     heading.innerHTML = `Order ID : ${orderId}`;
-    price.innerHTML = `Total price : ${totalPrice} €`;
+    price.innerHTML = `Total price : ${totalPrice}€`;
     localStorage.clear();
 };
 

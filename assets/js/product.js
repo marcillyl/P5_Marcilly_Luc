@@ -11,7 +11,7 @@ function displayProductInfo (product) {
     productName.innerHTML = product.name;
     productDescription.innerHTML = product.description;
     productPrice.innerHTML = product.price;
-    productPrice.innerHTML = `${product.price / 100} €`;
+    productPrice.innerHTML = `${product.price / 100}€`;
     for (let i = 0; i < productLenses.length; i++) {
         let opt = productLenses[i];
         let elt = document.createElement("option");
