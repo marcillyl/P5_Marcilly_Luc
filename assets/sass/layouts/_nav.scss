@@ -13,7 +13,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     background: $two;
-    border: solid 1.7pt $five;
+    border: solid 1.4pt $five;
     border-top: none;
     & a {
         @include small {
@@ -41,7 +41,7 @@ nav {
     width: 100%;
     height: 44pt;
     background: $two;
-    border-bottom: solid 1.7pt $five;
+    border-bottom: solid 1.4pt $five;
 }
 .active {
     border-bottom-color: $eight;

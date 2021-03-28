@@ -63,6 +63,9 @@ function addToCart () {
         }
         localStorage.setItem(productId, JSON.stringify(products));
     }
+    let navLink = document.querySelector('nav :nth-child(3)');
+    navLink.href = `checkout.html`;
+    navLink.classList.remove('disabled');
 };
 
 async function main () {

@@ -16,8 +16,8 @@
             grid-template-rows: 170px 44.7pt;
             max-width: 400px;
             margin: 24px 17px;
-            background: $four;
-            border: solid 1.7pt $seven;
+            background: $three;
+            border: solid 3pt $five;
         }
         display: grid;
         grid-template-columns: 4.1fr 3.4fr;
@@ -39,7 +39,7 @@
                 border: unset;
                 grid-column: unset;
                 grid-row: 1;
-                border-bottom: solid 11.4pt $seven;
+                border-bottom: solid 11.4pt $five;
             }
             grid-column: 2;
             position: relative;
@@ -66,6 +66,7 @@
                 background: unset;
                 box-shadow: unset;
                 padding: unset;
+                font-size: 13pt;
             }
             grid-column: 1;
             grid-row: 1;
@@ -102,7 +103,7 @@
             @if ($i % 2 == 0) {
                 @include small {
                     border: none;
-                    border-bottom: solid 10pt $seven;
+                    border-bottom: solid 11.4pt $five;
                     grid-column: unset;
                     grid-row: 1;
                 }

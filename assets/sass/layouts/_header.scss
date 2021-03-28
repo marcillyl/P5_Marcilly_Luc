@@ -13,7 +13,8 @@ main {
     position: sticky;
     top: 44pt;
     padding: 0 40px;
-    border: solid 1.7pt $five;
+    background: $two;
+    border: solid 1.4pt $five;
     border-top: none;
     border-bottom: none;
     & .header {

@@ -18,10 +18,10 @@ function displayProductList (array) {
     }
 }
 
-async function main () {
+async function accessApi () {
     const cameras = await fetch(vCam)
         .then((response) => response.json());
     displayProductList(cameras);
 };
 
-main();
+accessApi();
