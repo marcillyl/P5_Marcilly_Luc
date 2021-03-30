@@ -1,17 +1,18 @@
 const vCam = ['http://localhost:3000/api/cameras/']
+const productImg = document.getElementById("productImg");
+const productName = document.getElementById("productName");
+const productDescription = document.getElementById("productDescription");
+const productPrice = document.getElementById("productPrice");
+const selectLense = document.getElementById("selectLense");
 
 function displayProductInfo (product) {
     let productLenses = product.lenses;
-    const productImg = document.getElementById("productImg");
-    const productName = document.getElementById("productName");
-    const productDescription = document.getElementById("productDescription");
-    const productPrice = document.getElementById("productPrice");
-    const selectLense = document.getElementById("selectLense");
     productImg.src = product.imageUrl;
     productName.innerHTML = product.name;
     productDescription.innerHTML = product.description;
     productPrice.innerHTML = product.price;
     productPrice.innerHTML = `${product.price / 100}€`;
+
     for (let i = 0; i < productLenses.length; i++) {
         let opt = productLenses[i];
         let elt = document.createElement("option");
@@ -19,6 +20,7 @@ function displayProductInfo (product) {
         elt.value = opt;
         selectLense.appendChild(elt);
     }
+
     selectLense.addEventListener("change", (event) => {
         return chosenLense = event.target.value;
     });

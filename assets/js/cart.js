@@ -1,5 +1,7 @@
 const vCam = ['http://localhost:3000/api/cameras/'];
 const cartContainer = document.getElementById('cartContainer');
+const checkoutLink = document.getElementById('checkoutLink');
+const checkoutButton = document.getElementById('checkoutButton');
 const total = document.getElementById('totalPrice');
 let totalPrice = 0;
 
@@ -8,15 +10,12 @@ async function displayCart () {
     if (localStorage.length === 0) {
 
         let empty = document.createElement('h3');
-        let checkoutLink = document.getElementById('checkoutLink');
-        let checkoutButton = document.getElementById('checkoutButton');
         cartContainer.appendChild(empty);
         empty.innerHTML = `Your cart is empty !`;
         total.innerHTML = `0€`;
         checkoutLink.classList.add('disabled');
         checkoutLink.href = `#`;
         checkoutButton.disabled = true;
-        checkoutButton.classList.add('disabled');
         
     } else {
 
@@ -52,7 +51,7 @@ async function displayCart () {
                 let productLense = JSON.stringify(productInCart[i].lense);
                 let quantity = productInCart[i].quantity;
                 totalPrice += (productData.price * productInCart[i].quantity / 100);
-                
+
                 img.src = productData.imageUrl;
                 name.innerHTML = productData.name;
                 option.innerHTML = `${productLense} x ${quantity}`

@@ -33,10 +33,6 @@
             padding: 14px 30px;
             margin: 10px 40px 40px 0;
             font-size: 11pt;
-            transition: background-color 200ms ease-in-out;
-            &:hover {
-                background: $five;
-            }
         }
     }
     &-pane {
@@ -68,6 +64,7 @@
             font-size: 12pt;
         }
         &__price {
+            justify-self: flex-end;
             margin-right: 10px;
             font-size: 12pt;
         }
@@ -98,7 +95,7 @@
                 }
                 grid-column: 4;
                 justify-self: flex-end;
-                margin-right: 17px;
+                margin-right: 10px;
                 font-size: 14pt;
                 font-weight: 500;
             }

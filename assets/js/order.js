@@ -1,4 +1,5 @@
 const vCam = ['http://localhost:3000/api/cameras/'];
+const orderInfo = document.getElementById('orderInfo');
 
 async function orderStatus () {
     const queryString = window.location.search;
@@ -15,7 +16,6 @@ async function orderStatus () {
         }
     }
 
-    const orderInfo = document.getElementById('orderInfo');
     let heading = document.createElement('h4');
     let price = document.createElement('h4');
     orderInfo.appendChild(heading);
