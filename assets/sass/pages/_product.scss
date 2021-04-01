@@ -83,7 +83,7 @@
             font-size: 17pt;
             border: none;
             outline: none;
-            &:hover i {
+            &:active i {
                 animation: transX 240ms ease-in-out both;
             }
         }
