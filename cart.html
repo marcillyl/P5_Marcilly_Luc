@@ -26,7 +26,7 @@
                 <div id="cartContainer" class="cartContainer">
                     <div class="cartContainer-buttons">
                         <button onclick="clearCart()">Clear</button>
-                        <a href="checkout.html" id="checkoutLink"><button id="checkoutButton">Checkout</button></a>
+                        <button id="checkoutButton" onclick="window.location.href = `checkout.html`">Checkout</button>
                     </div>
                     <div class="cartContainer-pane cartContainer-pane--total">
                         <p class="totalText">Total</p>
@@ -35,7 +35,7 @@
                 </div>
             </section>
         </div>
-        <script type="text/javascript" src="assets/js/cart.js"></script>
-        <script type="text/javascript" src="assets/js/style.js"></script>
+        <script src="assets/js/cart.js"></script>
+        <script src="assets/js/style.js"></script>
     </body>
 </html>

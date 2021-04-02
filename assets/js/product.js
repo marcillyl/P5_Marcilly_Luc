@@ -6,7 +6,6 @@ const productPrice = document.getElementById("productPrice");
 const selectLense = document.getElementById("selectLense");
 
 function displayProductInfo (product) {
-    
     // Personnalise la page produit avec les informations de l'objet.
     let productLenses = product.lenses;
     productImg.src = product.imageUrl;
@@ -41,9 +40,27 @@ function lenseIncluded (products, lense) {
     return false;
 };
 
+// Vérifie si l'objet est présent dans l'option sélectionnée.
+function checkOption (products) {
+    // Si l'objet ET l'option sélectionnée sont présents : augmente sa quantité de 1.
+    if (lenseIncluded(products, chosenLense) === true) {
+        for (let elem of products) {
+            if (elem.lense == chosenLense) {
+                elem.quantity++;
+            }
+        }
+    // Si l'objet est présent MAIS pas dans l'option sélectionnée : ajoute cette version au panier.
+    } else {
+        let product = {
+            lense : chosenLense,
+            quantity : 1
+        }
+        products.push(product);
+    }    
+}
+
 // Ajoute l'objet au panier.
 function addToCart () {
-
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const productId = urlParams.get("productId");
@@ -60,26 +77,10 @@ function addToCart () {
         localStorage.setItem(productId, JSON.stringify(cart));
 
     } else {
-
-        // Si l'objet ET l'option sélectionnée sont présents : augmente sa quantité de 1.
-        if (lenseIncluded(products, chosenLense) === true) {
-            for (let elem of products) {
-                if (elem.lense == chosenLense) {
-                    elem.quantity++;
-                }
-            }
-
-        // Si l'objet est présent MAIS pas dans l'option sélectionnée : ajoute cette version au panier.
-        } else {
-            let product = {
-                lense : chosenLense,
-                quantity : 1
-            }
-            products.push(product);
-        }
+        checkOption(products);
         localStorage.setItem(productId, JSON.stringify(products));
     }
-
+    
     // Active l'onglet Checkout.
     let navLink = document.querySelector('nav :nth-child(3)');
     navLink.href = `checkout.html`;
